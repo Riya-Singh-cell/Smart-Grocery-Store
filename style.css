@@ -1,0 +1,718 @@
+/* 🌟 Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🌿 Navbar */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(90deg, #28a745, #218838); /* Gradient Green */
+    padding: 15px 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 🛍️ Logo Styling */
+.logo img {
+    height: 60px;
+    filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3)); /* Adds depth */
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Slight zoom effect */
+}
+
+/* 🔍 Search Box */
+.search-container {
+    position: relative;
+    width: 40%;
+}
+
+.search-box {
+    width: 100%;
+    padding: 12px 40px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-box:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+}
+
+.search-icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+/* 🛒 Buttons */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.location-btn, .login-btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.location-btn {
+    background-color: #f8f9fa;
+    color: black;
+}
+
+.location-btn:hover {
+    background-color: #e9ecef;
+}
+
+.login-btn {
+    background-color: black;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #28a745;
+    color: white;
+}
+
+.cart-btn {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    padding: 12px;
+    border-radius: 50%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.cart-btn:hover {
+    background-color: red;
+    color: white;
+}
+
+/* 📌 Quick Links - Full Width */
+.quick-links {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background-color: #f2f2f2;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.quick-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 0;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.quick-links a:hover {
+    color: white;
+    background-color: #28a745;
+}
+
+/* 🌿 Categories Section */
+.categories {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* 📷 Category Box */
+.category {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    width: 200px;
+}
+
+.category img {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.category p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 🚀 Hover Effect */
+.category:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 📦 Product Section */
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 30px 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+/* 🎁 Individual Product Card */
+.product {
+    position: relative;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    width: 220px;
+    flex-shrink: 0;
+}
+
+/* 🛒 Product Image */
+.product img {
+    width: 30%;
+    height: 160px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* 🏷️ Offer Tag */
+.offer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* 📦 Product Section */
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 70px;
+    padding: 60px 180px;
+    justify-content: center;
+    width:100%;
+}
+
+/* 🎁 Individual Product Card */
+.product {
+    position: relative;
+    background: white;
+    border-radius: 20px;
+    padding: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* 🛒 Product Image */
+.product img {
+    width: 100%;
+    height: 160px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* 🏷️ Offer Tag */
+.offer {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: red;
+    color: white;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* 🛍️ Product Name */
+.product p {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* 🚀 Hover Effect */
+.product:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 📱 Responsive for Smaller Screens */
+@media (max-width: 768px) {
+    .product-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on small screens */
+    }
+}
+/* 🛍️ Add to Cart Button */
+.add-to-cart {
+    margin-top: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #218838;
+}
+
+/* 🛒 Cart Button */
+.cart-btn {
+    background-color: white;
+    color: red;
+    border: 2px solid red;
+    padding: 12px;
+    border-radius: 50px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.cart-btn span {
+    background: red;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+/* Footer Styling */
+footer {
+    background-color: #689F38;
+    color: white;
+    margin-top: 50px;
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+/* Back to Top */
+.back-to-top {
+    text-align: center;
+    background-color:#2E7D32;
+    padding: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.back-to-top:hover {
+    background-color: #33691E;
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+/* Footer Column */
+.footer-column {
+    width: 20%;
+    min-width: 150px;
+}
+
+.footer-column h3 {
+    margin-bottom: 10px;
+}
+
+/* Footer Links */
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin: 5px 0;
+}
+
+.footer-column ul li a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* Personalized Recommendations Section */
+.personalized-recommendations {
+    text-align: center;
+    background-color: #F3F3F3;
+    padding: 30px 0;
+    font-size: 16px;
+}
+
+.personalized-recommendations h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #111;
+}
+
+.sign-in-btn {
+    background-color: #FFD814;
+    border: none;
+    padding: 8px 40px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sign-in-btn:hover {
+    background-color: #F7CA00;
+}
+
+.personalized-recommendations p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+.personalized-recommendations a {
+    color: #007185;
+    text-decoration: none;
+}
+
+.personalized-recommendations a:hover {
+    text-decoration: underline;
+}
+.copyright {
+    background-color: #1B5E20;
+    padding: 10px 0;
+    font-size: 14px;
+    text-align: center;
+}
+#auth-btn {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 50px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Shopping Cart Heading */
+h1 {
+    font-size: 28px;
+    color: #333;
+}
+
+/* Shopping Cart Table */
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background: #008000;
+    color: white;
+    text-transform: uppercase;
+}
+
+td img {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+}
+
+/* Quantity Selector */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-controls button {
+    background: #008000;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.quantity-controls button:hover {
+    background: #006600;
+}
+
+/* Remove Button */
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.remove-btn:hover {
+    background: darkred;
+}
+
+/* Total Price */
+.total-container {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 15px;
+}
+
+/* Checkout Button */
+.checkout-btn {
+    background: #ff6600;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.checkout-btn:hover {
+    background: #cc5200;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+    th, td {
+        padding: 10px;
+    }
+    .checkout-btn {
+        width: 80%;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 50%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.modal-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.modal-content h2 {
+    color: #333;
+    font-size: 24px;
+}
+
+.modal-content p {
+    color: #666;
+    font-size: 18px;
+}
+.carousel-container {
+    position: relative;
+    width: 70%;
+    max-width: 800px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+/* Ensure modal covers the full screen */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+}
+
+/* Center the modal content properly */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    text-align: center;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Ensure input fields are aligned properly */
+.modal-content input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Adjust the save button */
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background: #008000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-content button:hover {
+    background: #006400;
+}
+
+
+.close {
+    color: black;
+    font-size: 24px;  /* Increases the size of 'X' */
+    width: 35px;      /* Increases clickable area */
+    height: 35px; 
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover Effect */
+.close:hover {
+    color: red;
+    transform: scale(1.3);  /* Makes it slightly larger on hover */
+}
+#locationModal {
+    display: none;  /* Hide by default */
+}

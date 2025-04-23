@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Vegetables</title>
+    <link rel="stylesheet" href="stylee.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <button class="cart-btn" onclick="goToCart()">
+            <i class="fa-solid fa-shopping-basket"></i> 
+            <span id="cart-count">0</span> 
+        </button>
+    </nav>
+    <h1 style="text-align: center; color: black;">Juicy Fruits</h1> 
+
+    <!-- Product List -->
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Apple.png" alt="">
+                <p>Apple - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Apple', 25, '../Apple.png')">Add to Cart</button>
+
+            </div>
+            <div class="product-card">
+                <img src="Banana.png" alt="">
+                <p>Banana - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Banana', 25, 'Banana.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Mango.png" alt="">
+                <p>Mango - Rs56/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Mango', 56, 'Mango.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Watermelon.png" alt="">
+                <p>Watermelon - Rs60/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Watermelon', 60, 'Watermelon.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Orange.png" alt="">
+                <p>Orange - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Orange', 25, 'Orange.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Strawberry.png" alt="">
+                <p>Strawberry - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Strawberry', 25, 'Strawberry.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Papaya.png" alt="">
+                <p>Papaya - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Papaya', 25, 'Papaya.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Pomegranate.png" alt="">
+                <p>Pomegranate - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Pomegranate', 25, 'Pomegranate.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Kiwi.png" alt="">
+                <p>Kiwi - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Kiwi', 25, 'Kiwi.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Guava.png" alt="">
+                <p>Guava - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Guava', 25, 'Guava.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Grapes.png" alt="">
+                <p>Grapes - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Grapes', 25, 'Grapes.png')">Add to Cart</button>
+            </div>
+            
+            
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Vegetables</title>
+    <link rel="stylesheet" href="stylee.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <button class="cart-btn" onclick="goToCart()">
+            <i class="fa-solid fa-shopping-basket"></i> 
+            <span id="cart-count">0</span> 
+        </button>
+    </nav>
+    <h1 style="text-align: center; color: black;">Noodles</h1> 
+
+    <!-- Product List -->
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Maggie.jpeg" alt="Maggie">
+                <p>Maggie - Rs25</p>
+                <button class="add-to-cart" onclick="addToCart('Maggie', 25, 'Maggie.jpeg')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Yippee.jpeg" alt="Potato">
+                <p>Yippee - Rs15</p>
+                <button class="add-to-cart" onclick="addToCart('Yippee', 15, 'Yippee.jpeg')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Ramen.jpeg" alt="Carrot">
+                <p>Ramen - Rs30</p>
+                <button class="add-to-cart" onclick="addToCart('Ramen', 30, 'Ramen.jpeg')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Buldak.jpeg" alt="Buldak">
+                <p>Olay - Rs15</p>
+                <button class="add-to-cart" onclick="addToCart('Buldak', 15, 'Buldak.jpeg')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Buldak Spicy.jpeg" alt="Buldak">
+                <p>Buldak Spicy - Rs25</p>
+                <button class="add-to-cart" onclick="addToCart('Buldak Spicy', 25, 'Buldak Spicy.jpeg')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Knorr Noodles.jpeg" alt="Knorr Noodles">
+                <p>Knorr Noodles - Rs80</p>
+                <button class="add-to-cart" onclick="addToCart('Knorr Noodles', 80, 'Knorr Noodles.jpeg')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Ching's Noodles.jpeg" alt="Ching's Noodles">
+                <p>Ching's Noodles - Rs30</p>
+                <button class="add-to-cart" onclick="addToCart('Chings Noodles', 300, 'Chings Noodles.jpeg')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Hakka Noodles.png" alt="Cabbage">
+                <p>Hakka Noodles.png - Rs200</p>
+                <button class="add-to-cart" onclick="addToCart('Hakka Noodles', 200, 'Hakka Noodles.png')">Add to Cart</button>
+            </div>
+           
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

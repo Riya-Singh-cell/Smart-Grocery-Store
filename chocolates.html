@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Vegetables</title>
+    <link rel="stylesheet" href="stylee.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <button class="cart-btn" onclick="goToCart()">
+            <i class="fa-solid fa-shopping-basket"></i> 
+            <span id="cart-count">0</span> 
+        </button>
+    </nav>
+    <h1 style="text-align: center; color: black;">Chocolates</h1> 
+    <!-- Product List -->
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Dairy Milk.png" alt="Dairy Milk">
+                <p>Dairy Milk - Rs150</p>
+                <button class="add-to-cart" onclick="addToCart('Dairy Milk', 25, 'Dairy Milk.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Fuse.png" alt="Fuse">
+                <p>Fuse - Rs30</p>
+                <button class="add-to-cart" onclick="addToCart('Fuse', 25, 'Fuse.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Crispello.png" alt="Crispello">
+                <p>Crispello - Rs35</p>
+                <button class="add-to-cart" onclick="addToCart('Crispello', 56, 'Crispello.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Munch.png" alt="Munch">
+                <p>Munch - Rs20</p>
+                <button class="add-to-cart" onclick="addToCart('Munch', 60, 'Munch.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Kitkat.png" alt="Kitkat">
+                <p>Kitkat - Rs40</p>
+                <button class="add-to-cart" onclick="addToCart('Kitkat', 25, 'Kitkat.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Milky Bar.png" alt="Milky Bar">
+                <p>Milky Bar - Rs25</p>
+                <button class="add-to-cart" onclick="addToCart('Milky Bar', 25, 'Milky Bar.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="5 Star.png" alt="5 Star">
+                <p>5 Star - Rs25</p>
+                <button class="add-to-cart" onclick="addToCart('5 Star', 25, '5 Star.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Perk.png" alt="Perk">
+                <p>Perk - Rs15</p>
+                <button class="add-to-cart" onclick="addToCart('Perk', 25, 'Perk.png')">Add to Cart</button>
+            </div>
+            
+            
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

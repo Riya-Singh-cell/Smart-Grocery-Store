@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: rgb(238, 240, 238);
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgb(200, 200, 200);
+            text-align: center;
+            width: 400px;
+        }
+        form {
+            background-color:rgb(192, 250, 192);
+            padding: 20px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        .form-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 10px 0;
+        }
+        label {
+            font-size: 16px;
+            margin-bottom: 5px;
+            width: 40%;
+            text-align: left;
+        }
+        input[type="text"], input[type="email"], input[type="password"], select {
+            width: 55%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus, select:focus {
+            border-color: green;
+            outline: none;
+        }
+        .btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: darkgreen;
+        }
+        .mobile-container {
+            display: flex;
+            align-items: center;
+            width: 55%;
+        }
+        .country-code {
+            padding: 6px 10px;
+            background-color: #eee;
+            border: 1px solid #ccc;
+            border-radius: 5px 0 0 5px;
+            font-size: 16px;
+            white-space: nowrap; 
+        }
+        #mobile {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-left: none;
+            border-radius: 0 5px 5px 0;
+            width: 100%; 
+            font-size: 16px;
+        }
+        .password-container {
+            display: flex;
+            align-items: center;
+            width: 55%;
+        }
+        .toggle-password {
+            cursor: pointer;
+            margin-left: -30px; /* Adjust as needed */
+            background: none;
+            border: none;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>SIGN UP</h1>
+        <form name="SIGN UP" onsubmit="return storeUserData()">
+
+
+            <div class="form-group">
+                <label for="name">Username:</label>
+                <input type="text" name="name" id="name" pattern="^[a-zA-Z0-9]{5,15}$" title="Username should be 5-15 characters long and contain only letters and numbers." required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" title="Please enter a valid email address." required>
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div style="width: 55%;">
+                    <input type="radio" name="gender" value="male" required> Male
+                    <input type="radio" name="gender" value="female"> Female
+                    
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select name="country" id="country" onchange="updateCountryCode()" required>
+                    <option value="" disabled selected>Select Your Country</option>
+                    <option value="India" data-code="+91">India</option>
+                    <option value="United States" data-code="+1">United States</option>
+                    <option value="United Kingdom" data-code="+44">United Kingdom</option>
+                    <option value="Canada" data-code="+1">Canada</option>
+                    <option value="Australia" data-code="+61">Australia</option>
+                    <option value="Germany" data-code="+49">Germany</option>
+                    <option value="France" data-code="+33">France</option>
+                    <option value="Japan" data-code="+81">Japan</option>
+                    <option value="China" data-code="+86">China</option>
+                    <option value="Brazil" data-code="+55">Brazil</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile:</label>
+                <div class="mobile-container">
+                    <span class="country-code" id="countryCode">+91</span>
+                    <input type="text" name="mobile" id="mobile" pattern="\d{10}" title="Please enter a valid 10-digit mobile number." placeholder="Enter mobile number" required>
+                </div>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        name="password" 
+                        id="password" 
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" 
+                        title="Password must be at least 8 characters long and contain at least one letter and one number." 
+                        required
+                    >
+                    <button 
+                        type="button" 
+                        class="toggle-password" 
+                        onclick="togglePassword('password')"
+                        aria-label="Show Password"
+                    >👁️</button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="repassword">Re-enter Password:</label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        name="repassword" 
+                        id="repassword" 
+                        pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$" 
+                        title="Password must be at least 8 characters long and contain at least one letter and one number." 
+                        required
+                    >
+                    <button 
+                        type="button" 
+                        class="toggle-password" 
+                        onclick="togglePassword('repassword')"
+                        aria-label="Show Re-entered Password"
+                    >👁️</button>
+                </div>
+            </div>
+            
+
+            <input type="submit" value="Sign Up" class="btn">
+        </form>
+    </div>
+    <script>
+        const countryCodes = {
+            "India": "+91",
+            "United States": "+1",
+            "United Kingdom": "+44",
+            "Canada": "+1",
+            "Australia": "+61",
+            "Germany": "+49",
+            "France": "+33",
+            "Japan": "+81",
+            "China": "+86",
+            "Brazil": "+55"
+        };
+    
+        function updateCountryCode() {
+            const selectedCountry = document.getElementById("country").value;
+            document.getElementById("countryCode").textContent = countryCodes[selectedCountry] || "+";
+        }
+    
+        function togglePassword(id) {
+            const passwordField = document.getElementById(id);
+            const type = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordField.setAttribute('type', type);
+        }
+    
+        function storeUserData() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const gender = document.querySelector('input[name="gender"]:checked')?.value;
+            const country = document.getElementById("country").value;
+            const mobile = document.getElementById("mobile").value;
+            const password = document.getElementById("password").value;
+            const repassword = document.getElementById("repassword").value;
+    
+            if (password !== repassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+    
+            const user = {
+                name,
+                email,
+                gender,
+                country,
+                mobile,
+                password
+            };
+    
+            localStorage.setItem("user", JSON.stringify(user));
+    
+            alert("Sign-up successful! You can now log in.");
+            window.location.href = "login.html"; // or any login page
+            return false;
+        }
+    </script>
+    
+</body>
+</html>

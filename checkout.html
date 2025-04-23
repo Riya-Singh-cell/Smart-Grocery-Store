@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Smart Grocery Store</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #e8f5e9; 
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            width: 50%;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            border-top: 5px solid #4caf50; 
+        }
+        h2 {
+            color: #2e7d32; 
+        }
+        .form-group {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            color: #388e3c; 
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #81c784; 
+            border-radius: 5px;
+        }
+        .order-summary {
+            background: #c8e6c9; 
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .place-order-btn {
+            background-color: #4caf50; 
+            color: white;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .place-order-btn:hover {
+            background-color: #388e3c; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Checkout</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Shipping Address</label>
+                <input type="text" id="address" placeholder="Enter your address" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment">Payment Method</label>
+                <select id="payment">
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="card">Credit/Debit Card</option>
+                    <option value="upi">UPI</option>
+                </select>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <p>Total Items: 3</p>
+                <p><strong>Total: ₹241.00</strong></p>
+            </div>
+
+            <button type="submit" class="place-order-btn">Place Order</button>
+        </form>
+    </div>
+    <script>
+        document.querySelector("form").addEventListener("submit", function(event) {
+            event.preventDefault(); // stops the form from refreshing the page
+            const name = document.getElementById("name").value.trim();
+            const address = document.getElementById("address").value.trim();
+            const payment = document.getElementById("payment").value;
+    
+            if (name && address) {
+                alert(`Hey ${name}! 🎉 Your order of ₹241.00 has been placed.\nDelivery to: ${address}\nPayment: ${payment.toUpperCase()}`);
+            } else {
+                alert("Please fill in all the details!");
+            }
+        });
+    </script>
+    
+
+</body>
+</html>

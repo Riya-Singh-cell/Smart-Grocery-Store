@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dairy Products</title>
+    <link rel="stylesheet" href="stylee.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <button class="cart-btn" onclick="goToCart()">
+            <i class="fa-solid fa-shopping-basket"></i> 
+            <span id="cart-count">0</span> 
+        </button>
+    </nav>
+    <h1 style="text-align: center; color: black;">Dairy products</h1> 
+
+    <!-- Product List -->
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Paneer.png" alt="Paneer">
+                <p>Paneer - Rs 0.48/g</p>
+                <button class="add-to-cart" onclick="addToCart('Paneer', 25, 'Paneer.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Ghee.png" alt="Ghee">
+                <p>Ghee - Rs500/ltr</p>
+                <button class="add-to-cart" onclick="addToCart('Ghee', 25, 'Ghee.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Milk.png" alt="Milk">
+                <p>Milk - Rs100/ltr</p>
+                <button class="add-to-cart" onclick="addToCart('Milk', 56, 'Milk.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Yogurt.png" alt="Yogurt">
+                <p>Yogurt - Rs150/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Yogurt', 60, 'Yogurt.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Cream.png" alt="Cream">
+                <p>Cream - Rs600/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Cream', 25, 'Cream.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Butter.png" alt="Butter">
+                <p>Butter - Rs650/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Butter', 25, 'Butter.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="tonnedmilk.png" alt="Tonned Milk">
+                <p>Tonned Milk - Rs100/ltr</p>
+                <button class="add-to-cart" onclick="addToCart('tonned milk', 25, 'tonnedmilk.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Soyamilk.png" alt="Soyamilk">
+                <p>Soya milk - Rs200/ltr</p>
+                <button class="add-to-cart" onclick="addToCart('Soya milk', 25, 'Soyamilk.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Milkshake.png" alt="Milkshake">
+                <p>Milkshake - Rs100/ltr</p>
+                <button class="add-to-cart" onclick="addToCart('Milkshake', 25, 'Milkshake.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Dahi.png" alt="Dahi">
+                <p>Dahi - Rs500/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Dahi', 25, 'Dahi.png')">Add to Cart</button>
+            </div>
+            
+            
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

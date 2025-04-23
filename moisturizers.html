@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Vegetables</title>
+    <link rel="stylesheet" href="stylee.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <button class="cart-btn" onclick="goToCart()">
+            <i class="fa-solid fa-shopping-basket"></i> 
+            <span id="cart-count">0</span> 
+        </button>
+    </nav>
+    <h1 style="text-align: center; color: black;">Moisturizers</h1> 
+
+    <!-- Product List -->
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Clinique.png" alt="Tomato">
+                <p>Clinique - Rs250</p>
+                <button class="add-to-cart" onclick="addToCart('Clinique', 250, 'Clinique.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Garnier.png" alt="Potato">
+                <p>Garnier - Rs150</p>
+                <button class="add-to-cart" onclick="addToCart('Garnier', 150, 'Garnier.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Loreal.png" alt="Carrot">
+                <p>Loreal - Rs560</p>
+                <button class="add-to-cart" onclick="addToCart('Loreal', 560, 'Loreal.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Olay.png" alt="Onion">
+                <p>Olay - Rs110</p>
+                <button class="add-to-cart" onclick="addToCart('Olay', 110, 'Olay.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Ponds.png" alt="Garlic">
+                <p>Ponds - Rs250</p>
+                <button class="add-to-cart" onclick="addToCart('Ponds', 250, 'Ponds.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Cetaphil.png" alt="Brinjal">
+                <p>Cetaphil - Rs80</p>
+                <button class="add-to-cart" onclick="addToCart('Cetaphil', 80, 'Cetaphil.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Lotus.png" alt="Lotus">
+                <p>Lotus - Rs300</p>
+                <button class="add-to-cart" onclick="addToCart('Lotus', 300, 'Lotus.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Cerave.png" alt="Cabbage">
+                <p>Cerave - Rs200</p>
+                <button class="add-to-cart" onclick="addToCart('Cerave', 200, 'Cerave.png')">Add to Cart</button>
+            </div>
+           
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

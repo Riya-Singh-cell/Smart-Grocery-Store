@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+
+    <h1>Shopping Cart</h1>
+    <a href="SmartGroceryStore.html" >← Continue Shopping</a>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+                <th>Remove</th>
+            </tr>
+        </thead>
+        <tbody id="cart-items"></tbody>
+    </table>
+
+    <h3>Total: <span id="total-price">₹0.00</span></h3>
+    <button onclick="proceedToCheckout()">Proceed to Checkout</button>
+   
+
+    <script src="cart.js"></script>
+</body>
+</html>
+
+

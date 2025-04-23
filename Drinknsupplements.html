@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Vegetables</title>
+    <link rel="stylesheet" href="stylee.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <button class="cart-btn" onclick="goToCart()">
+            <i class="fa-solid fa-shopping-basket"></i> 
+            <span id="cart-count">0</span> 
+        </button>
+    </nav>
+    <h1 style="text-align: center; color: black;">Drink & supplements</h1> 
+
+    <!-- Product List -->
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Horlicks.png" alt="Horlicks">
+                <p>Horlicks - Rs120</p>
+                <button class="add-to-cart" onclick="addToCart('Horlicks', 25, 'Horlicks.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Maaza.png" alt="Maaza">
+                <p>Maaza - Rs25</p>
+                <button class="add-to-cart" onclick="addToCart('Maaza', 25, 'Maaza.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="BournVita.png" alt="BournVita">
+                <p>BournVita - Rs260</p>
+                <button class="add-to-cart" onclick="addToCart('BournVita', 56, 'BournVita.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Slice.png" alt="Slice">
+                <p>Slice - Rs50</p>
+                <button class="add-to-cart" onclick="addToCart('Slice', 60, 'Slice.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Complan.png" alt="Complan">
+                <p>Complan - Rs200</p>
+                <button class="add-to-cart" onclick="addToCart('Complan', 25, 'Complan.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Frooti.png" alt="Frooti">
+                <p>Frooti - Rs25</p>
+                <button class="add-to-cart" onclick="addToCart('Frooti', 25, 'Frooti.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Boost.png" alt="Boost">
+                <p>Boost - Rs250</p>
+                <button class="add-to-cart" onclick="addToCart('Boost', 25, 'Boost.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="ThumsUp.png" alt="ThumsUp">
+                <p>ThumsUp - Rs60</p>
+                <button class="add-to-cart" onclick="addToCart('ThumsUp', 25, 'ThumsUp.png')">Add to Cart</button>
+            </div>
+            
+            
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

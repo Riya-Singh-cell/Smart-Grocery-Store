@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Online Grocery Store</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background-color: rgb(192, 250, 192);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #070f07;
+            font-weight: 700;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: green;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .login-btn:hover {
+            background-color: #45a049;
+        }
+
+        .forgot-password {
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .forgot-password a {
+            color: rgb(9, 24, 9);
+            text-decoration: none;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="input-field" placeholder="Enter your username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="input-field" placeholder="Enter your password" required>
+
+            <button type="submit" class="login-btn">Login</button>
+        </form>
+
+        <p class="error-message" id="error-message"></p>
+
+        <div class="forgot-password">
+            <p><a href="forgot_password_page.html">Forgot your password?</a></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevents the default form submission
+
+            let username = document.getElementById("username").value.trim();
+            let password = document.getElementById("password").value.trim();
+            let errorMessage = document.getElementById("error-message");
+
+            // Dummy credentials (Replace with database authentication in real implementation)
+            let storedUsername = "user123";
+            let storedPassword = "pass123";
+
+            if (username === storedUsername && password === storedPassword) {
+                // Store login status
+                localStorage.setItem("isLoggedIn", "true");
+                localStorage.setItem("username", username);
+
+                // Redirect to the main page
+                window.location.href = "SmartGroceryStore.html";
+            } else {
+                errorMessage.textContent = "❌ Invalid Username or Password!";
+            }
+        });
+
+        // Prevent logged-in users from seeing the login page
+        if (localStorage.getItem("isLoggedIn") === "true") {
+            window.location.href = "SmartGroceryStore.html";
+        }
+    </script>
+
+</body>
+</html>

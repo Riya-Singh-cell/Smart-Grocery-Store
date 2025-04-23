@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Grocery Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="carousel.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+   <nav class="navbar">
+       <div class="logo">
+           <img src="logo.png" alt="Logo">
+       </div>
+       <div class="search-container">
+        <i class="fa fa-search search-icon"></i>
+        <input class="search-box" type="text" placeholder="Search for Products">
+    </div>
+    
+    
+    
+
+       <button class="location-btn" onclick="openLocationModal()">📍 Select Location</button>
+       <button id="auth-btn">Login / Sign Up</button>
+
+       <div id="auth-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAuthModal()">&times;</span>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
+        </div>
+    </div>
+    
+       <button class="cart-btn" onclick="goToCart()">
+           <i class="fa fa-shopping-basket"></i>
+           <span class="cart-count">0</span>
+       </button>
+   </nav>
+
+    <div id="location-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeLocationModal()">&times;</span>
+            <h1>Select Your Location</h1><br>
+            
+            <label>PIN Code:</label>
+            <input type="text" id="pincode" placeholder="Enter PIN Code">
+            <button onclick="fetchDistrict()">Save Location</button>
+
+            <p id="district-name"></p>
+        </div>
+    </div>
+
+   <div class="carousel-container-fluid">
+       <div class="carousel">
+           <img src="poster1.png" alt="Poster 1">
+           <img src="poster2.png" alt="Poster 2">
+           <img src="poster3.png" alt="Poster 3">
+       </div>
+       <button class="prev" onclick="prevSlide()">&#10094;</button>
+       <button class="next" onclick="nextSlide()">&#10095;</button>
+   </div>
+   
+
+   <div class="quick-links">
+       <a href="#">🥦 Fresh Produce</a>
+       <a href="#">🥛 Dairy & Eggs</a>
+       <a href="#">🍞 Bakery & Breads</a>
+       <a href="#">🥫 Packaged Foods</a>
+       <a href="#">🧼 Household Essentials</a>
+   </div>
+
+   <section class="product-container">
+    
+    <a href="vegetable.html">
+        <div class="category">
+       
+        <img src="vegetables.jpeg" alt="Fresh Vegetables">
+            <p>Fresh Vegetables</p>
+            
+        </div>
+    </a>
+    
+
+    <a href="fruits.html">
+        <div class="category">
+       
+        <img src="fruits.jpeg" alt="Fresh Fruits">
+            <p>Juicy Fruits</p>
+            
+        </div>
+    </a>
+
+    <a href="dairyproducts.html">
+        <div class="category">
+        
+        <img src="dairy.jpeg" alt="Dairy Products">
+            <p>Dairy Products</p>
+            
+        </div>
+    </a>
+
+    <a href="chocolates.html">
+        <div class="category">
+        
+        <img src="chocolates.jpeg" alt="Chocolates">
+            <p>Chocolates</p>
+            
+        </div>
+    </a>
+
+    <a href="detergents.html">
+        <div class="category">
+            <img src="detergents.jpeg" alt="Detergents">
+        
+            <p>Detergents</p>
+            
+        </div>
+    </a>
+
+    <a href="Drinknsupplements.html">
+        <div class="category">
+       
+        <img src="Drinknsupplements.jpeg" alt="Drinknsupplements">
+            <p>Drink & supplements</p>
+            
+        </div>
+    </a>
+
+    <a href="moisturizers.html">
+        <div class="category">
+        
+        <img src="moisturizer.jpeg" alt="moisturizer">
+            <p>Moisturizers</p>
+            
+        </div>
+    </a>
+
+    <a href="Noodles.html">
+        <div class="category">
+       
+        <img src="noodles.jpeg" alt="noodles">
+            <p>Noodles</p>
+            
+        </div>
+    </a>
+
+   
+</section>
+
+   <footer>
+       <div class="personalized-recommendations">
+           <h2>See personalized recommendations</h2>
+           <button class="sign-in-btn">Sign in</button>
+           <p>New customer? <a href="#">Start here.</a></p>
+       </div>
+       
+       <div class="back-to-top">Back to top</div>
+       <div class="footer-container">
+           <div class="footer-column">
+               <h3>Get to Know Us</h3>
+               <ul>
+                <li><a href="about.html">About Us</a></li>
+                   <li><a href="#">Careers</a></li>
+                   <li><a href="#">Press Releases</a></li>
+                   <li><a href="#">Our Science</a></li>
+               </ul>
+           </div>
+           <div class="footer-column">
+               <h3>Connect with Us</h3>
+               <ul>
+                   <li><a href="#">Facebook</a></li>
+                   <li><a href="#">Twitter</a></li>
+                   <li><a href="#">Instagram</a></li>
+               </ul>
+           </div>
+           <div class="footer-column">
+               <h3>Make Money with Us</h3>
+               <ul>
+                   <li><a href="#">Sell on Our Store</a></li>
+                   <li><a href="#">Advertise Your Products</a></li>
+                   <li><a href="#">Become an Affiliate</a></li>
+                   <li><a href="#">Fulfillment Services</a></li>
+               </ul>
+           </div>
+           <div class="footer-column">
+               <h3>Let Us Help You</h3>
+               <ul>
+                   <li><a href="#">Your Account</a></li>
+                   <li><a href="#">Returns</a></li>
+                   <li><a href="#">Order Tracking</a></li>
+                   <li><a href="#">Customer Support</a></li>
+               </ul>
+           </div>
+       </div>
+       <div class="copyright">
+           <p> Copyright © 2024-2026 Smart Grocery Store Pvt Ltd</p>
+       </div>
+   </footer>
+
+   <div id="item-modal" class="modal">
+       <div class="modal-content">
+           <span class="close">&times;</span>
+           <img id="modal-img" src="" alt="Item Image">
+           <h2 id="modal-name"></h2>
+           <p id="modal-price"></p>
+           <p id="modal-description"></p>
+       </div>
+   </div>
+
+   <script type="module" src="firebase.js"></script>
+   <script type="module">
+    import { updateAuthStatus } from './firebase.js';
+  
+    document.addEventListener('DOMContentLoaded', function () {
+        updateAuthStatus();
+    });
+  </script>
+   <script src="script.js"></script>
+   <script src="carousel.js"></script>
+   <script src="cart.js"></script>
+   <script>
+    const searchInput = document.querySelector('.search-box');
+
+    searchInput.addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            const query = searchInput.value.trim().toLowerCase();
+
+            // Mapping of keywords to pages
+            const pageMap = {
+                "vegetables": "vegetable.html",
+                "fresh vegetables": "vegetable.html",
+                "fruits": "fruits.html",
+                "juicy fruits": "fruits.html",
+                "dairy": "dairyproducts.html",
+                "dairy products": "dairyproducts.html",
+                "chocolates": "chocolates.html",
+                "detergents": "detergents.html",
+                "drinks": "Drinknsupplements.html",
+                "drink & supplements": "Drinknsupplements.html",
+                "supplements": "Drinknsupplements.html",
+                "moisturizers": "moisturizers.html",
+                "noodles": "Noodles.html"
+            };
+
+            if (pageMap[query]) {
+                window.location.href = pageMap[query];
+            } else {
+                alert("Oops! No results found for '" + query + "'. Try another product!");
+            }
+        }
+    });
+</script>
+
+
+</body>
+</html>

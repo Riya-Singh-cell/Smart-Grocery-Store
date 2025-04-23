@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Vegetables</title>
+    <link rel="stylesheet" href="stylee.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav> 
+        <button class="cart-btn" onclick="goToCart()">
+            <i class="fa-solid fa-shopping-basket"></i> 
+            <span id="cart-count">0</span> 
+        </button>
+    </nav>
+    <h1 style="text-align: center; color: black;">Vegetables</h1> 
+
+    <!-- Product List -->
+    <div class="container">
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="Tomato.png" alt="Tomato">
+                <p>Tomato - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Tomato', 25, 'Tomato.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Potato.png" alt="Potato">
+                <p>Potato - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Potato', 25, 'Potato.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Carrot.png" alt="Carrot">
+                <p>Carrot - Rs56/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Carrot', 56, 'Carrot.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Onion.png" alt="Onion">
+                <p>Onion - Rs60/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Onion', 60, 'Onion.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Garlic.png" alt="Garlic">
+                <p>Garlic - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Garlic', 25, 'Garlic.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Brinjal.png" alt="Brinjal">
+                <p>Brinjal - Rs80/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Brinjal', 80, 'Brinjal.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Cucumber.png" alt="Cucumber">
+                <p>Cucumber - Rs25/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Cucumber', 25, 'Cucumber.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Cabbage.png" alt="Cabbage">
+                <p>Cabbage - Rs40/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Cabbage', 40, 'Cabbage.png')">Add to Cart</button>
+            </div>
+            <div class="product-card">
+                <img src="Cauliflower.png" alt="Cauliflower">
+                <p>Cauliflower - Rs50/kg</p>
+                <button class="add-to-cart" onclick="addToCart('Cauliflower', 50, 'Cauliflower.png')">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
