@@ -1,4 +1,4 @@
-// ✅ Run when the page loads
+
 document.addEventListener("DOMContentLoaded", function () {
     displayCart();
     updateCartCount();

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Manage Products - Smart Grocery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to right, #e3f2fd, #bbdefb);
+      padding: 40px 20px;
+      color: #222;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #0d47a1;
+      font-size: 2.2rem;
+    }
+
+    form {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #1e88e5;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+      transform: scale(1.05);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 14px;
+      border-bottom: 1px solid #e0e0e0;
+      text-align: left;
+      font-size: 15px;
+    }
+
+    th {
+      background-color: #2196f3;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    td:last-child {
+      white-space: nowrap;
+    }
+
+    td button {
+      background-color: #42a5f5;
+      margin-right: 5px;
+      padding: 6px 12px;
+      font-size: 14px;
+      border-radius: 6px;
+    }
+
+    td button:hover {
+      background-color: #1976d2;
+    }
+
+    @media (max-width: 768px) {
+      form, table {
+        width: 100%;
+        overflow-x: auto;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Manage Products</h1>
+
+  <form id="product-form">
+    <input type="text" id="product-name" placeholder="Enter Product Name" required>
+    <input type="number" id="product-price" placeholder="Enter Price" required>
+    <input type="text" id="product-category" placeholder="Enter Category" required>
+    <input type="number" id="product-quantity" placeholder="Enter Quantity" required>
+    <textarea id="product-description" placeholder="Enter Description"></textarea>
+    <button type="submit">Add Product</button>
+  </form>
+
+  <table id="product-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Description</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- New rows will be added here -->
+    </tbody>
+  </table>
+
+  <script>
+    document.getElementById("product-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("product-name").value.trim();
+      const price = parseFloat(document.getElementById("product-price").value);
+      const category = document.getElementById("product-category").value.trim();
+      const quantity = parseInt(document.getElementById("product-quantity").value);
+      const description = document.getElementById("product-description").value.trim();
+
+      if (!name || isNaN(price) || !category || isNaN(quantity)) {
+        alert("Please fill all fields properly!");
+        return;
+      }
+
+      const table = document.getElementById("product-table").getElementsByTagName("tbody")[0];
+      const newRow = table.insertRow();
+
+      newRow.innerHTML = `
+        <td>${name}</td>
+        <td>₹${price.toFixed(2)}</td>
+        <td>${category}</td>
+        <td>${quantity}</td>
+        <td>${description}</td>
+        <td>
+          <button onclick="editProduct(this)">Edit</button>
+          <button onclick="deleteProduct(this)">Delete</button>
+        </td>
+      `;
+
+      document.getElementById("product-form").reset();
+    });
+
+    function deleteProduct(btn) {
+      const row = btn.parentNode.parentNode;
+      row.remove();
+    }
+
+    function editProduct(btn) {
+      const row = btn.parentNode.parentNode;
+      const cells = row.getElementsByTagName("td");
+
+      document.getElementById("product-name").value = cells[0].innerText;
+      document.getElementById("product-price").value = parseFloat(cells[1].innerText.replace("₹", ""));
+      document.getElementById("product-category").value = cells[2].innerText;
+      document.getElementById("product-quantity").value = cells[3].innerText;
+      document.getElementById("product-description").value = cells[4].innerText;
+
+      row.remove();
+    }
+  </script>
+
+</body>
+</html>

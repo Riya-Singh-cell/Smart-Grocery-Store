@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Grocery - Choose Role</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
+      background: url('sm.png') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .role-box {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 100%;
+      max-width: 400px;
+      transition: transform 0.3s ease;
+    }
+
+    .role-box:hover {
+      transform: scale(1.05);
+    }
+
+    .role-box h1 {
+      margin-bottom: 20px;
+      font-size: 32px;
+      color: #333;
+      font-weight: bold;
+    }
+
+    .role-box p {
+      font-size: 18px;
+      color: #555;
+      margin-bottom: 30px;
+    }
+
+    .role-box button {
+      margin: 10px;
+      padding: 15px 25px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s ease-in-out;
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .role-box button:hover {
+      background-color: #388E3C;
+      transform: translateY(-3px);
+    }
+
+    .role-box button:active {
+      transform: translateY(1px);
+    }
+
+    @media (max-width: 480px) {
+      .role-box button {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="role-box">
+    <h1>Welcome to Smart Grocery Store</h1>
+    <p>Welcome! Please select your role</p>
+    <button onclick="redirectToAdmin()">Admin</button>
+    <button onclick="window.location.href='SmartGroceryStore.html'">Customer</button>
+  </div>
+
+  <script>
+    function redirectToAdmin() {
+      // Prompt the user for a password
+      const password = prompt("Please enter the admin password:");
+
+      // The correct password
+      const correctPassword = "admin123"; // Replace with your actual admin password
+
+      // Check if the entered password is correct
+      if (password === correctPassword) {
+        window.location.href = "admin.html";  // Redirect to the admin page
+      } else {
+        alert("Incorrect password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>

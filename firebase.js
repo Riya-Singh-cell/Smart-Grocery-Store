@@ -21,19 +21,30 @@ const auth = getAuth(app);
 const provider = new GoogleAuthProvider();
 
 // Function to handle Google Sign-In
+// Function to handle Google Sign-In
 export function signInWithGoogle() {
   signInWithPopup(auth, provider)
     .then((result) => {
       const user = result.user;
       localStorage.setItem("user", JSON.stringify(user));
       alert(`Welcome, ${user.displayName}!`);
-      updateAuthStatus();
+
+      // 🚨 Redirect based on email
+      const email = user.email;
+      if (email === "riya160305@gmail.com") {
+        window.location.href = "admin.html"; // 🧠 Admin access
+      } else {
+        window.location.href = "SmartGroceryStore.html"; // 🛍️ General users
+      }
+
+      updateAuthStatus(); // Optional if you want to refresh the button text
     })
     .catch((error) => {
       console.error("Error during sign-in:", error);
       alert("Failed to sign in. Please try again.");
     });
 }
+
 
 // Function to handle Sign-Out
 export function signOutUser() {

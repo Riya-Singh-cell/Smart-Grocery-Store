@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard - Smart Grocery Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb); /* Soft blues */
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: linear-gradient(90deg, #1565c0, #42a5f5); /* Deep + light blue */
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  letter-spacing: 1px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: #2196f3; /* Icon blue */
+  margin-bottom: 15px;
+}
+
+.card h2 {
+  font-size: 1.6rem;
+  color: #0d47a1; /* Deep blue title */
+  margin-bottom: 10px;
+}
+
+.card a {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #1e88e5; /* Button blue */
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.card a:hover {
+  background-color: #1565c0; /* Darker hover blue */
+  transform: scale(1.05);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  background-color: #e3f2fd;
+  color: #555;
+}
+.dashboard {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  padding: 50px 40px;
+  flex: 1;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  text-align: center;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.12);
+}
+
+.card p {
+  font-size: 14.5px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+  </style>
+</head>
+<body>
+
+  <header>
+    Smart Grocery Admin Dashboard 🌱🛒
+  </header>
+
+  <div class="dashboard">
+    <div class="card">
+      <i class="fas fa-box"></i>
+      <h2>Manage Products</h2>
+      <p>Add, update, or delete products from your smart inventory.</p>
+      <a href="manage_products.html">Explore</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-shopping-cart"></i>
+      <h2>View Orders</h2>
+      <p>Track and manage all customer orders in real-time.</p>
+      <a href="orders.html">Check Now</a>
+    </div>
+    <div class="card">
+      <i class="fas fa-users"></i>
+      <h2>Customer Details</h2>
+      <p>Browse and update all registered customer data.</p>
+      <a href="customers.html">See Users</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Smart Grocery Store Admin. All rights reserved.
+  </footer>
+
+</body>
+</html>

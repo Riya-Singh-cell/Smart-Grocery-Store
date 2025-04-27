@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Grocery Store Admin – View Orders</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(120deg, #f9f9f9, #e2e8f0);
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #1a202c;
+      letter-spacing: 1px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      background-color: #ffffff;
+    }
+
+    th {
+      background-color: #2563eb;
+      color: #fff;
+      padding: 15px 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 14px;
+    }
+
+    td {
+      padding: 14px 12px;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 15px;
+    }
+
+    tr:hover {
+      background-color: #f1f5f9;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    select {
+      padding: 6px 10px;
+      font-size: 14px;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      background-color: #f8fafc;
+      cursor: pointer;
+    }
+
+    select:focus {
+      outline: none;
+      border-color: #60a5fa;
+      box-shadow: 0 0 0 2px rgba(96, 165, 250, 0.4);
+    }
+  </style>
+</head>
+<body>
+  <h1>All Orders</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Customer Name</th>
+        <th>Product</th>
+        <th>Quantity</th>
+        <th>Total Price</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody id="orders-table">
+      <tr>
+        <td>ORD001</td>
+        <td>Riya Singh</td>
+        <td>Dairy Milk</td>
+        <td>3</td>
+        <td>₹90</td>
+        <td>
+          <select>
+            <option>Pending</option>
+            <option>Shipped</option>
+            <option>Delivered</option>
+            <option>Cancelled</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>ORD002</td>
+        <td>Arjun Mehta</td>
+        <td>Apples</td>
+        <td>2</td>
+        <td>₹120</td>
+        <td>
+          <select>
+            <option>Pending</option>
+            <option selected>Shipped</option>
+            <option>Delivered</option>
+            <option>Cancelled</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>ORD003</td>
+        <td>Priya Sharma</td>
+        <td>Ice Cream</td>
+        <td>2</td>
+        <td>₹120</td>
+        <td>
+          <select>
+            <option>Pending</option>
+            <option selected>Shipped</option>
+            <option>Delivered</option>
+            <option>Cancelled</option>
+          </select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</body>
+</html>
